@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 60%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+input[type="text"], button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.delete-btn {
+    margin-left: 20px;
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.list {
+    
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.list-title {
+    cursor: pointer;
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0;
+    user-select: none; /* Prevent text selection */
+}
+
+.tasks {
+    list-style: none;
+    padding-left: 0;
+}
+
+.task {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #dddddd;
+    cursor: pointer;
+    position: relative;
+    
+}
+
+.task:last-child {
+    border-bottom: none;
+}
+
+.task.done {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+
+    .modal-content {
+        width: 80%;
+    }
+}
