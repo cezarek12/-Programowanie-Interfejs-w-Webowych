@@ -1,0 +1,190 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+.modal {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  min-width: 600;
+  
+  min-height: 600px; /* Set the minimum height you want */
+  max-width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size:64px;
+  font-family: var(--title-font);
+  font-size: 72;
+  font-weight: 400;
+  grid-column: 1 / -1; /* Ensures the header takes full width */
+  justify-self: center; 
+}
+
+.close-button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 24px;
+  color: #aaa;
+}
+
+.modal-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px 20px;
+  align-items: start;
+  display: grid;
+
+}
+
+.modal-content .form-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  white-space: nowrap;
+  position: relative;
+}
+
+.modal-content .form-group label {
+  
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.modal-content .form-group .description-part {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  align-items: top;
+  flex-shrink: 0;
+  margin-right: 100px; 
+ 
+}
+
+.inline-group label {
+  flex-shrink: 0;
+  margin-right: 50px; 
+  
+}
+
+.modal-content .form-group.full-width {
+  width: 100%;
+}
+
+.modal-content .form-group.inline-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+}
+
+.modal-content .form-group.inline-group > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"], textarea, select {
+  width: 100%;
+  max-width: 100%;
+  padding: 8px 10px;
+  margin: 0;
+  box-sizing: border-box;
+  border: 1px solid #50614A;
+  border-radius: 16px;
+  font-size: 18px;
+}
+
+.inline-group input[type="text"] {
+  max-width: fit-content; 
+  
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  padding-top: 20px;
+  gap: 10px;
+}
+
+.buttonAdd.primaryAdd {
+  background-color: #c4e641;
+  border: none;
+  padding: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: var(--radius-large);
+}
+
+.buttonAdd.primaryAdd:hover {
+  background-color: var(--hover);
+  color: var(--neutral);
+  transition: var(--transition);
+}
+
+.cancel-button {
+  background-color: transparent;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 20px;
+}
+
+button.cancel-button:hover {
+  color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+@media (max-width: 768px) {
+  .modal {
+    width: 100%;
+  }
+
+  .modal-content {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content .form-group.inline-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input[type="text"], textarea, select {
+    width: 100%;
+  }
+}
