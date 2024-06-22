@@ -1,0 +1,99 @@
+.header-navigation {
+    width: 100%;
+    padding: 24px 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    position: fixed;
+    top: 0;
+    z-index: 1000; 
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    column-gap: 48px;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    white-space: nowrap; 
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: var(--primary-dark);
+  }
+  
+  .nav-link:hover {
+    color: var(--hover);
+    transition: var(--transition);
+  }
+  
+  .button-link {
+    background: none;
+    border: none;
+    color: var(--primary-dark);
+    cursor: pointer;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: var(--copy-small);
+    text-decoration: none;
+    padding: 0;
+    border-radius: var(--radius-medium);
+  }
+  
+  .button-link:hover {
+    color: var(--hover);
+    transition: var(--transition);
+  }
+  
+  .link-to-button a, .link-to-button a:hover, .link-to-button a:active, .link-to-button a:visited {
+    text-decoration: none !important;
+    color: inherit;  
+  }
+  
+  .button.primary {
+    background-color: var(--primary-light);
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: var(--radius-large); /* More rounded corners */
+  }
+  
+  .primary {
+    background-color: var(--primary-light);
+    border-radius: var(--radius-large); /* More rounded corners */
+    text-decoration: none; 
+    width: 100%; 
+  }
+  
+  .primary:hover {
+    background-color: var(--hover);
+    color: var(--neutral);
+    transition: var(--transition);
+  }
+  
+  .hidButtn {
+    background-color: var(--primary-light);
+    border-radius: var(--radius-large); /* More rounded corners */
+    border: none;
+    padding: 10px 20px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .hurt {
+    background-color: white;
+    border-radius: 50%;
+    justify-content: right;
+    align-items: right;
+    display: flex;;
+  }
+  
